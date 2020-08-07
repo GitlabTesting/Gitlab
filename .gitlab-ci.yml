@@ -7,8 +7,7 @@ sonarQube:
     tags:
         - ci
     script:
-        - cd ~/Downloads/sonar-scanner-4.4.0.2170-macosx/bin
-        - sonar-scanner \
+        - ~/Downloads/sonar-scanner-4.4.0.2170-macosx/bin/sonar-scanner \
           -Dsonar.projectKey=gitlab \
           -Dsonar.sources=~/Downloads/selenium-test/Gitlab/ \
           -Dsonar.host.url=http://localhost:9000 \
