@@ -2,5 +2,4 @@ demo_job_1:
     tags:
         - ci
     script:
-        - cd ~/Downloads/Katalon_Studio_Engine_MacOS-7.6.2/Katalon\ Studio\ Engine.app/Contents/MacOS
-        - ./katalonc -noSplash -runMode=console -projectPath="/Users/lborwick/Katalon Studio/Gitlab Test/Gitlab Test.prj" -retry=0 -testSuitePath="Test Suites/Gitlab tests" -executionProfile="default" -browserType="Chrome" -apiKey="e3e747ea-df5f-466d-9661-43220d709de1" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true
+        - selenium-side-runner -c "goog:chromeOptions.args=[--headless,--nogpu] browserName=chrome" ~/Downloads/gitlab/gitlab.side
