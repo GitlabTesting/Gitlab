@@ -10,6 +10,6 @@ sonarQube:
         - cd ~/Downloads/sonar-scanner-4.4.0.2170-macosx/bin
         - sonar-scanner \
           -Dsonar.projectKey=gitlab \
-          -Dsonar.sources=. \
+          -Dsonar.sources=~/Downloads/selenium-test/Gitlab/ \
           -Dsonar.host.url=http://localhost:9000 \
           -Dsonar.login=bc4c79242ffba2bd6bea4994b2d8b6a1375a5fe5
