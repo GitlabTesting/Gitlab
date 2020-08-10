@@ -3,3 +3,14 @@ e2e tests:
         - ci
     script:
         - selenium-side-runner -c "goog:chromeOptions.args=[--headless,--nogpu] browserName=chrome" ~/Downloads/gitlab/gitlab.side
+
+sonarqube:
+    tags:
+        - ci
+    script:
+        - cd ~/Downloads/selenium-test/Gitlab/
+        - ~/Downloads/sonar-scanner-4.4.0.2170-macosx/bin/sonar-scanner \
+  -Dsonar.projectKey=gitlab \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=41ad1d8934e6c427fb5e47849c73d006bc64b5a6
