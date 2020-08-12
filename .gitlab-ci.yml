@@ -2,7 +2,7 @@ e2e tests:
     tags:
         - ci
     script:
-        - selenium-side-runner -c "goog:chromeOptions.args=[--headless,--nogpu] browserName=chrome" ~/Downloads/gitlab/gitlab.side
+        - selenium-side-runner -c "goog:chromeOptions.args=[--headless,--nogpu] browserName=chrome" ~/Downloads/gitlab.side
 
 sonarqube:
     tags:
